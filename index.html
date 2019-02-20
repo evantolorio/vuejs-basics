@@ -9,10 +9,27 @@
 <body>
     <div id="app">
         <div>
-            <h1> {{ header }} </h1>
-            <p>
-                {{ message }}
-            </p>
+            <div>
+                <h3>{{ header }}</h3>
+                <p>
+                    <h4>Normal</h4>
+                    <img src="docdelta.png" width="400">
+                </p>
+                <p>
+                    <h4>v-bind</h4>
+                    <img v-bind:src="imageUrl" width="400">
+                </p>
+                <p>
+                    <h4>shorthand</h4>
+                    <img :src="imageUrl" width="400">
+                </p>
+            </div>
+            <div>
+                <!-- 
+                    Exercise: Make an anchor tag and bind the 'href' attribute.
+                    Hence, make the href attribute dynamic. 
+                -->
+            </div>
         </div>
     </div>
     <script src="vue.js"></script>
