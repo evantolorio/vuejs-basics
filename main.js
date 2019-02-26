@@ -2,7 +2,8 @@
 var app = new Vue({
     el: '#app',
     data: {
-        header: 'Attribute Binding',
-        imageUrl: 'docdelta.png'
+        header: 'Conditional Rendering',
+        doILovePets: true,
+        petPreference: 'dog'
     }
 });

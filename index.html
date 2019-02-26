@@ -11,23 +11,35 @@
         <div>
             <div>
                 <h3>{{ header }}</h3>
-                <p>
-                    <h4>Normal</h4>
-                    <img src="docdelta.png" width="400">
+                <p v-show="doILovePets">
+                    <h4>Yes, I love pets</h4>
+                    <h5 v-if="petPreference === 'dog'">I love dogs!!!</h5>
+                    <h5 v-else-if="petPreference === 'cat'"> I love cats!!! </h5>
+                    <h5 v-else> I love snakes!!! </h5>
                 </p>
-                <p>
-                    <h4>v-bind</h4>
-                    <img v-bind:src="imageUrl" width="400">
-                </p>
-                <p>
-                    <h4>shorthand</h4>
-                    <img :src="imageUrl" width="400">
-                </p>
+                <!-- templates are used to render more than one element -->
+                <template v-if="petPreference === 'dog'">
+                    <p>
+                        <h4>Dog</h4>
+                        <img src="puppy.jpg" width="400">
+                    </p>
+                </template>
+                <template v-else-if="petPreference === 'cat'">
+                    <p>
+                        <h4>Cat</h4>
+                        <img src="cat.jpg" width="400">
+                    </p>
+                </template>
+                <template v-else >
+                    <p>
+                        <h4>Snake</h4>
+                        <img src="snake.jpg" width="400">
+                    </p>
+                </template>
             </div>
             <div>
                 <!-- 
-                    Exercise: Make an anchor tag and bind the 'href' attribute.
-                    Hence, make the href attribute dynamic. 
+                    Exercise: Add additional two animals conditionally render
                 -->
             </div>
         </div>
